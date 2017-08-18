@@ -1,0 +1,13 @@
+.row {
+  margin: 85px 0; }
+
+.jumbotron {
+  background: url(../images/hero.jpg);
+  margin-bottom: 85px;
+  color: white;
+  text-align: center; }
+
+.footer {
+  margin: 0; }
+
+/*# sourceMappingURL=style.css.map */
