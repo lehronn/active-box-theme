@@ -12,6 +12,13 @@ h5 {
   .fa.faOrange {
     color: #e84545; }
 
+.btn-download {
+  color: #ffffff;
+  background-color: #e84545;
+  cursor: pointer;
+  padding-left: 60px;
+  padding-right: 60px; }
+
 a .faLight {
   border-color: #ffffff;
   color: #ffffff;
@@ -38,6 +45,13 @@ a .faDark {
 
 .features h5 {
   color: #000000; }
+
+.ready {
+  margin: 25px 0; }
+  .ready h6 {
+    text-transform: uppercase;
+    color: #000000;
+    margin: 25px; }
 
 .about {
   background-color: #3a3e64;
