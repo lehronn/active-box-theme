@@ -1,13 +1,57 @@
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+h5 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 5px;
+  color: #ffffff; }
+
+.fa {
+  size: 15px; }
+  .fa.faOrange {
+    color: #e84545; }
+
+a .faLight {
+  border-color: #ffffff;
+  color: #ffffff;
+  border: 2px solid;
+  border-radius: .3em;
+  line-height: 15px;
+  padding: 10px; }
+
+a .faDark {
+  border-color: gray;
+  color: gray;
+  border: 2px solid;
+  border-radius: .2em;
+  line-height: 15px;
+  padding: 15px; }
+
 .row {
   margin: 85px 0; }
 
 .jumbotron {
   background: url(../images/hero.jpg);
   margin-bottom: 85px;
-  color: white;
-  text-align: center; }
+  color: #ffffff; }
+
+.features h5 {
+  color: #000000; }
+
+.about {
+  background-color: #3a3e64;
+  color: #c6cacc; }
+  .about .container {
+    margin: 0 auto;
+    padding: 25px; }
+  .about h5 {
+    color: #ffffff; }
 
 .footer {
+  background-color: #313454;
+  padding: 10px;
+  color: #c6cacc;
   margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
