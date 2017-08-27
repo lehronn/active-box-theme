@@ -1,6 +1,15 @@
 module.exports = function(grunt) {
 	// Project configuration.
 		grunt.initConfig({
+		    watch: {
+				scripts: {
+					files: ['dev/html/*.html','dev/sass/*.sass','dev/scripts/*.js'],
+					tasks: ['htmlmin','sass','cssmin','uglify','browserSync'],
+					options: {
+						spawn: false,
+					},
+				}
+			},
 			sass: {
 				options: {
 					sourceMap: true
@@ -20,13 +29,8 @@ module.exports = function(grunt) {
                     files: {                                   // Dictionary of files 
                         'dist/index.html': 'dev/html/index.html'     // 'destination': 'source'
                     }
-                },
-                dev: {                                       // Another target 
-                    files: {
-                        'dist/index.html': 'dev/html/index.html'
                     }
-                }
-            },
+                },
             cssmin: {
                 target: {
                     files: [{
@@ -38,6 +42,9 @@ module.exports = function(grunt) {
                     }]
                 }
             },
+        	jshint: {
+    			all: ['dev/scripts/*.js']
+    		},
             uglify: {
                  my_target: {
                     files: [{
@@ -59,38 +66,30 @@ module.exports = function(grunt) {
 				}
 			},
 			browserSync: {
-				dev: {
-					bsFiles: {
-						src : [
-							'css/*.css',
-							'*.html'
-							]
-					},
+				bsFiles: {
+				src : [
+				    	'dist/themes/active-box-theme/styles/*.css',
+				    	'dist/*.html'
+				    ]
+				},
 					options: {
 						watchTask: true,
 						server: './dist'
 					}
-				}
-			},
-			watch: {
-				scripts: {
-					files: ['dev/html/*.html','dev/sass/*.sass','dev/scripts/*.js'],
-					tasks: ['htmlmin','sass','cssmin','uglify'],
-					options: {
-						spawn: false,
-					},
-				}
 			}
 		});
 	grunt.registerTask('default', ['htmlmin']);
+
 	// Load the plugins tasks
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+
 	// Default task(s).
-	grunt.registerTask("default", ["sass", "imagemin", "browserSync", "watch"]);
+	grunt.registerTask("default", ["sass", "imagemin","jshint","watch"]);
 };
