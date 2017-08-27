@@ -1,0 +1,1 @@
+var now=new Date,hours=now.getHours(),minutes=now.getMinutes();
