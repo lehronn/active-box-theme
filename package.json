@@ -1,28 +1,17 @@
 {
-  "name": "green-perfect",
+  "name": "sodainc.",
   "version": "1.0.0",
-  "description": "simple rwd & sass template",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "green-perfect-test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lehronn/green-perfect.git"
-  },
-  "keywords": [
-    "grunt"
-  ],
+  "keywords": [],
   "author": "Mateusz Stomski",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lehronn/green-perfect/issues"
-  },
-  "homepage": "https://github.com/lehronn/green-perfect#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-htmlmin": "^2.4.0",
     "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-jshint": "^1.1.0",

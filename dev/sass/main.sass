@@ -1,0 +1,194 @@
+// ====== variables
+$lighter: #3a3e64
+$darker: #313454
+$orange: #e84545
+$violet: #53354a
+$gray: #c6cacc
+$light: #ffffff
+$dark: #000000
+$font-gray: #656670
+
+// ====== styles
+body
+	font-family: 'Open Sans', sans-serif
+
+h5
+	text-transform: uppercase
+	text-align: center
+	padding: 5px 5px
+	color: $light
+
+.fa
+	size: 15px
+	&.faOrange
+		color: $orange
+
+.btn-download
+	color: $light
+	background-color: $orange
+	cursor: pointer
+	padding-left: 60px
+	padding-right: 60px
+
+a
+	.faLight
+		border-color: $light
+		color: $light
+		border: 2px solid
+		border-radius: .3em
+		line-height: 15px
+		padding: 10px
+	.faDark
+		border-color: gray
+		color: gray
+		border: 2px solid
+		border-radius: .2em
+		line-height: 15px
+		padding: 15px
+
+.row
+	margin: 85px 0
+
+nav
+	z-index: 3
+	background-color: transparent
+	background: transparent
+	border-color: transparent
+
+.navbar-nav
+		margin: auto 0 auto auto
+		li
+			padding-right: 30px
+
+.jumbotron
+	background: url(../images/hero.jpg) 90% 80%
+	margin-bottom: 85px
+	color: $light
+	padding: 0
+	height: 550px
+	position: relative
+	top: -56px
+
+.jumbotronTransparent
+	background-color: rgba(49, 52, 84, 0.92)
+	width: 100%
+	height: 100%
+	z-index: 1
+	box-sizing: border-box
+	padding: 2rem 1rem
+
+.jumbotronContent
+	margin-top: 120px
+
+.features
+	& h5
+		color: $dark
+	.fa
+		font-size: 100px
+		padding: 10px
+		color: $orange
+
+.gallery
+	margin: 1px
+
+.image
+	height: 260px
+	flex-wrap: nowrap
+	margin: 1px
+
+.i0
+	background: url(http://lorempixel.com/500/400/abstract/1)
+	flex: 1
+
+.i1
+	background: url(http://lorempixel.com/500/400/abstract/2)
+	flex: 1
+
+.i2
+	background: url(http://lorempixel.com/500/400/abstract/3)
+	flex: 1
+
+.i3
+	background: url(http://lorempixel.com/500/400/abstract/4)
+	flex: 1
+.i4
+	background: url(http://lorempixel.com/500/400/abstract/5)
+	flex: 1
+
+.i5
+	background: url(http://lorempixel.com/500/400/abstract/6)
+	flex: 1
+
+.i6
+	background: url(http://lorempixel.com/500/400/abstract/7)
+	flex: 1
+
+.i7
+	background: url(http://lorempixel.com/500/400/abstract/8)
+	flex: 1
+
+// .carousel
+//   height: 500px
+//   margin-bottom: 160px
+
+//my div cover style settings
+.carousel-image
+	background-size: cover !important
+	height: 500px
+// //my carousel custom settings
+// .carousel-inner
+//   width: 100%
+//   max-height: 500px !important
+//
+.carousel-caption
+	background-color: #53354a
+		height: 100%
+		width: 100%
+		position: relative
+		top: 0
+		left: 0
+
+.carousel-image-0
+	@extend .carousel-image
+	background: url(/images/people-woman-coffee-meeting.jpg)
+
+.carousel-image-1
+	@extend .carousel-image
+	background: url(/images/people-coffee-tea-meeting.jpg)
+
+.carousel-image-2
+	@extend .carousel-image
+	background: url(/images/pexels-photo-127513.jpeg)
+
+
+	//slider ma być na dwóch divach z col-6 i efektem cover chyba w ten sposób mam responsywny slider a zdjęcie nie jest ucięte muszę to napisać od początku praktycznie
+
+.carousel-indicators li
+	border-radius: 50%
+	width: 10px
+	height: 10px
+	position: relative
+	top: -100px
+	left: 45%
+
+.ready
+	margin: 25px 0
+	& h6
+		text-transform: uppercase
+		color: $dark
+		margin: 25px
+
+.about
+	background-color: $lighter
+	color: $gray
+	& .container
+		margin: 0 auto
+		padding: 25px
+	& h5
+		color: $light
+
+.footer
+	background-color: $darker
+	padding: 10px
+	color: $gray
+	margin: 0

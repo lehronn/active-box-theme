@@ -1,22 +1,31 @@
 module.exports = function(grunt) {
+
   // Project configuration.
   grunt.initConfig({
     watch: {
-      scripts: {
-        files: ['dev/html/*.html', 'dev/sass/*.sass', 'dev/scripts/*.js'],
-        tasks: ['htmlmin', 'sass', 'cssmin', 'uglify', 'browserSync'],
-        options: {
-          spawn: false,
-        },
-      }
+      files: ['dev/html/*.html',
+        'dev/sass/*.sass',
+        'dev/scss/*.scss',
+        'dev/css/*.css',
+        'dev/js/*.js',
+        'dev/css/*min.css',
+        'dev/js/*.min.js'
+      ],
+      tasks: ['jshint', 'sass', 'htmlmin', 'uglify']
+    },
+    jshint: {
+      all: ['gruntfile.js',
+        'dev/js/*.js'
+      ]
     },
     sass: {
       options: {
-        sourceMap: true
+        sourceMap: true,
+        outputStyle: 'compressed'
       },
-      dist: {
+      dev: {
         files: {
-          'dev/sass/style.css': 'dev/sass/style.sass'
+          'dist/css/main.css': 'dev/sass/main.sass'
         }
       }
     },
@@ -31,28 +40,15 @@ module.exports = function(grunt) {
         }
       }
     },
-    cssmin: {
-      target: {
-        files: [{
-          expand: true,
-          cwd: 'dev/sass',
-          src: ['*.css', '!*.min.css'],
-          dest: 'dist/themes/active-box-theme/styles',
-          ext: '.min.css'
-        }]
-      }
-    },
-    jshint: {
-      all: ['dev/scripts/*.js']
-    },
     uglify: {
       my_target: {
-        files: [{
-          expand: true,
-          cwd: 'dev/scripts',
-          src: '**/*.js',
-          dest: 'dist/themes/active-box-theme/scripts'
-        }]
+        options: {
+          sourceMap: true,
+          sourceMapName: 'dist/js/script.min.map'
+        },
+        files: {
+          'dist/js/script.min.js': ['dev/js/*.js']
+        }
       }
     },
     imagemin: {
@@ -60,15 +56,15 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'dev/images/',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'dist/themes/active-box-theme/images/'
+          src: ['**/*.{png,jpg,jpeg,gif}'],
+          dest: 'dist/images/'
         }]
       }
     },
     browserSync: {
       bsFiles: {
         src: [
-          'dist/themes/active-box-theme/styles/*.css',
+          'dist/css/*.css',
           'dist/*.html'
         ]
       },
@@ -78,18 +74,15 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('default', ['htmlmin']);
-
   // Load the plugins tasks
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
-
   // Default task(s).
-  grunt.registerTask("default", ["sass", "imagemin", "jshint", "watch"]);
+  grunt.registerTask('default', ['browserSync', 'watch']);
+  grunt.registerTask('dist', ['jshint', 'sass', 'htmlmin', 'uglify']);
 };
