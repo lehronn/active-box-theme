@@ -10,7 +10,8 @@ $font-gray: #656670
 
 // ====== styles
 body
-	font-family: 'Open Sans', sans-serif
+	font-family: 'Just Another Hand', cursive;
+	font-family: 'Open Sans', sans-serif;
 
 h5
 	text-transform: uppercase
@@ -127,45 +128,25 @@ nav
 	background: url(http://lorempixel.com/500/400/abstract/8)
 	flex: 1
 
-//my div cover style settings
-.carousel-image
-	background-size: cover !important
-	height: 100%
-	width: 100%
-
-.carousel-bg
-		background-color: #53354a
-
-//my carousel custom settings
 .carousel-inner
-  max-height: 500px !important
+	background-color: #53354a
+	max-height: 550px
+	.col-6
+		padding: 0 !important
+	img
+		padding: 0 !important
 
 .carousel-caption
-	height: 100%
-	width: 100%
-
-.carousel-image-0
-	@extend .carousel-image
-	background: url(/images/people-woman-coffee-meeting.jpg)
-
-.carousel-image-1
-	@extend .carousel-image
-	background: url(/images/people-coffee-tea-meeting.jpg)
-
-.carousel-image-2
-	@extend .carousel-image
-	background: url(/images/pexels-photo-127513.jpeg)
-
-
-	//slider ma być na dwóch divach z col-6 i efektem cover chyba w ten sposób mam responsywny slider a zdjęcie nie jest ucięte muszę to napisać od początku praktycznie
+	max-width: 400px
+	position: relative
+	right: 20%
+	left: 65%
+	bottom: 85%
 
 .carousel-indicators li
 	border-radius: 50%
 	width: 10px
 	height: 10px
-	position: relative
-	top: -100px
-	left: 45%
 
 .ready
 	margin: 25px 0
