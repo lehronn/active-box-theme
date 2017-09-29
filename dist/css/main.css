@@ -9,7 +9,8 @@ h5 {
   color: #ffffff; }
 
 .fa {
-  size: 15px; }
+  size: 15px;
+  margin: 3px 0 3px 0; }
   .fa.faOrange {
     color: #e84545; }
 
@@ -55,7 +56,7 @@ nav {
   margin-bottom: 85px;
   color: #ffffff;
   padding: 0;
-  height: 550px;
+  height: 600px;
   position: relative;
   top: -56px; }
 
@@ -84,7 +85,37 @@ nav {
 .image {
   height: 260px;
   flex-wrap: nowrap;
+  margin: 1px;
+  padding: 0; }
+
+.hover-image {
+  display: hide;
+  height: 260px;
+  flex-wrap: nowrap;
+  padding: 0;
   margin: 1px; }
+  .hover-image p {
+    display: none;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto; }
+
+.hover-image:hover {
+  display: block;
+  background-color: rgba(232, 69, 69, 0.85);
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  flex-wrap: nowrap;
+  margin: 1px;
+  text-align: center;
+  transition: display 0.4s; }
+  .hover-image:hover p {
+    display: block;
+    color: #ffffff;
+    position: relative;
+    top: 50%; }
 
 .i0 {
   background: url(http://lorempixel.com/500/400/abstract/1);
@@ -118,25 +149,53 @@ nav {
   background: url(http://lorempixel.com/500/400/abstract/8);
   flex: 1; }
 
+.team-mate {
+  padding: 25px;
+  margin: 0; }
+  .team-mate img {
+    width: 80%; }
+
+.team-names {
+  font-weight: bold;
+  font-size: 22px; }
+
+.team-position {
+  font-weight: bold;
+  font-size: 18px;
+  color: #e84545; }
+
+.team-sociallinks {
+  padding-top: 20px; }
+
 .carousel-inner {
   background-color: #53354a;
-  max-height: 550px; }
+  height: 600px; }
   .carousel-inner .col-6 {
     padding: 0 !important; }
   .carousel-inner img {
-    padding: 0 !important; }
+    padding: 0 !important;
+    width: 100%;
+    height: 100%; }
+
+.carousel-item .row {
+  margin-top: 0; }
 
 .carousel-caption {
-  max-width: 400px;
   position: relative;
-  right: 20%;
-  left: 65%;
-  bottom: 85%; }
+  top: 125px;
+  left: auto;
+  right: auto;
+  max-height: 50%;
+  max-width: 60%; }
 
 .carousel-indicators li {
   border-radius: 50%;
   width: 10px;
-  height: 10px; }
+  height: 10px;
+  position: relative;
+  top: -130px;
+  left: 35%;
+  right: auto; }
 
 .ready {
   margin: 25px 0; }
@@ -159,5 +218,50 @@ nav {
   padding: 10px;
   color: #c6cacc;
   margin: 0; }
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 300px) {
+  .navbar {
+    background-color: #313454; }
+  nav {
+    background-color: #313454;
+    background: #313454;
+    border-color: #313454; }
+  .team-mate {
+    margin: auto;
+    margin-top: 0;
+    text-align: center; } }
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .navbar {
+    background-color: #313454; }
+  nav {
+    background-color: #313454;
+    background: #313454;
+    border-color: #313454; } }
+
+.team-mate {
+  margin: auto;
+  margin-top: 0;
+  text-align: center; }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar {
+    background-color: transparent; }
+  nav {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent; } }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .navbar {
+    background-color: transparent; }
+  nav {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent; } }
 
 /*# sourceMappingURL=main.css.map */
