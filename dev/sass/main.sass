@@ -94,72 +94,67 @@ nav
 		color: $orange
 
 .gallery
-	margin: 1px
-
-.image
-	height: 260px
-	flex-wrap: nowrap
-	margin: 1px
-	padding: 0
+	margin: 0
+	.image
+		min-height: 400px
+		min-width: 400px
+		text-align: center
+		margin: 0 auto
 
 .hover-image
 	display: hide
-	height: 260px
-	flex-wrap: nowrap
-	padding: 0
-	margin: 1px
+	opacity: 0
+	width: 100%
+	height: 100%
+	transition: opacity 1s
+	text-align: center
+	position: absolute
+	top: 0
+	left: 0
 	p
-		display: none
-		position: relative
-		top: auto
-		left: auto
+		display: hide
+		position: absolute
+		top: 50%
+		bottom: auto
+		left: 25%
 		right: auto
 
 .hover-image:hover
 	display: block
-	background-color: $orange-transparent
-	height: 100%
-	width: 100%
-	padding: 0
-	flex-wrap: nowrap
-	margin: 1px
-	text-align: center
-	transition: display 0.4s
+	background-color: $orange
+	opacity: 0.75
 	p
-		display: block
 		color: $light
-		position: relative
-		top: 50%
 
 .i0
-	background: url(http://lorempixel.com/500/400/abstract/1)
+	background: url(http://lorempixel.com/500/500/abstract/1) no-repeat
 	flex: 1
 
 .i1
-	background: url(http://lorempixel.com/500/400/abstract/2)
+	background: url(http://lorempixel.com/500/500/abstract/2) no-repeat
 	flex: 1
 
 .i2
-	background: url(http://lorempixel.com/500/400/abstract/3)
+	background: url(http://lorempixel.com/500/500/abstract/3) no-repeat
 	flex: 1
 
 .i3
-	background: url(http://lorempixel.com/500/400/abstract/4)
+	background: url(http://lorempixel.com/500/500/abstract/4) no-repeat
 	flex: 1
 .i4
-	background: url(http://lorempixel.com/500/400/abstract/5)
+	background: url(http://lorempixel.com/500/500/abstract/5) no-repeat
 	flex: 1
 
 .i5
-	background: url(http://lorempixel.com/500/400/abstract/6)
+	background: url(http://lorempixel.com/500/500/abstract/6) no-repeat
 	flex: 1
 
 .i6
-	background: url(http://lorempixel.com/500/400/abstract/7)
+	background: url(http://lorempixel.com/500/500/abstract/7) no-repeat
 	flex: 1
 
 .i7
-	background: url(http://lorempixel.com/500/400/abstract/8)
+	background: url(http://lorempixel.com/500/500/abstract/8) no-repeat
 	flex: 1
 
 .team-mate
@@ -245,6 +240,8 @@ nav
 		background: $darker
 		border-color: $darker
 
+.image-hove
+
 	.team-mate
 		margin: auto
 		margin-top: 0
@@ -260,6 +257,12 @@ nav
 		background-color: $darker
 		background: $darker
 		border-color: $darker
+
+.hover-image
+	height: auto
+	width: auto
+	margin: 0 auto
+	text-align: center
 
 .team-mate
 	margin: auto
