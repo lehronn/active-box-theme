@@ -11,6 +11,8 @@ Bootstrap & Grunt powered RWD theme.
 
 `npm install` to install dependencies,
 
+`grunt` to start developer process.
+
 `grunt watch` to changes watching with grunt,
 
 `grunt imagemin` to minimalisation images.
